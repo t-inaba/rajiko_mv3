@@ -11,25 +11,34 @@
     "128": "Circle-icons-radio.png"
   },
   "permissions": [
+      "storage",
       "activeTab",
       "cookies",
-      "storage",
       "webRequest",
       "webRequestBlocking",
-      "downloads",
-      "unlimitedStorage",
+      "downloads"
+  ],
+  "optional_permissions": [
+      "unlimitedStorage"
+  ],
+  "host_permissions": [
       "*://*.radiko.jp/*",
       "*://*.smartstream.ne.jp/*",
       "*://*.radiko-cf.com/*"
-    ]
+  ],
+  "optional_host_permissions": [
+      "*://*.radiko.jp/*",
+      "*://*.smartstream.ne.jp/*",
+      "*://*.radiko-cf.com/*"
+  ]
 
     ,
   "default_locale": "ja"
 
     ,
   "background": {
-    "scripts": ["constants.js", "background.js"]
-
+    "service_worker": "serviceworker.js"
+    /*"scripts": ["constants.js", "background.js"]*/
   },
 
   "content_scripts":[{
@@ -43,11 +52,10 @@
   }],
   "web_accessible_resources": ["ui/inspect_start.js"],
 
-  "browser_action": {
+  "action": {
     "default_icon": "Circle-icons-radio-blue-48.png",
     "default_popup": "popup.html",
     "default_title": "__MSG_popup_title__"
-
   },
   "browser_specific_settings": {
     "gecko": {
