@@ -1,0 +1,26 @@
+[
+    {
+        "action": {
+            "redirect": {
+                "extensionPath": "/a.jpg"
+            },
+            "type": "redirect"
+        },
+        "condition": {
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "script",
+                "image",
+                "font",
+                "object",
+                "xmlhttprequest",
+                "media",
+                "other"
+            ],
+            "urlFilter": "||https://*.radiko.jp/"
+        },
+        "id": 1,
+        "priority": 1
+    }
+]

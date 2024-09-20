@@ -924,7 +924,7 @@ function downloadtimeShift(m3u8link, default_area_id) {
                 return l !==m3u8link;
               });
               chrome.storage.local.set({"timeshift_list":list},function(){
-                chrome.browserAction.setBadgeText && chrome.browserAction.setBadgeText({text: list.length > 0? list.length.toString() :""});
+                chrome.action.setBadgeText && chrome.action.setBadgeText({text: list.length > 0? list.length.toString() :""});
               });
             });
 
@@ -958,7 +958,7 @@ function downloadtimeShift(m3u8link, default_area_id) {
                           return l !==m3u8link;
                         });
                         chrome.storage.local.set({"timeshift_list":list},function(){
-                          chrome.browserAction.setBadgeText && chrome.browserAction.setBadgeText({text: list.length > 0? list.length.toString() :""});
+                          chrome.action.setBadgeText && chrome.action.setBadgeText({text: list.length > 0? list.length.toString() :""});
                         });
                       });
                       chrome.storage.local.remove(keyList, function() {
@@ -1130,7 +1130,7 @@ chrome.storage.local.get({"selected_areaid":"JP13"}, function (data) { //if not 
     }, function() {});
   });
 
-  chrome.browserAction.setBadgeText && chrome.browserAction.setBadgeText({text: ""}); //clean badgetext when crash
+  chrome.action.setBadgeText && chrome.action.setBadgeText({text: ""}); //clean badgetext when crash
   // //cookie may not be set here?
   // chrome.cookies.set({ url: "http://radiko.jp/", name: "default_area_id", value: area_id },function(c){
   //   console.log("set cookie",c);
@@ -1221,7 +1221,7 @@ chrome.storage.local.get({"selected_areaid":"JP13"}, function (data) { //if not 
           list.push(link);
           chrome.storage.local.set({"timeshift_list":list},function(){
             chrome.browserAction.setBadgeBackgroundColor && chrome.browserAction.setBadgeBackgroundColor({color: "#e73c64"});
-            chrome.browserAction.setBadgeText && chrome.browserAction.setBadgeText({text:list.length.toString()});
+            chrome.action.setBadgeText && chrome.action.setBadgeText({text:list.length.toString()});
             downloadtimeShift(msg["download-timeshift"], area_id);
           })
         });
