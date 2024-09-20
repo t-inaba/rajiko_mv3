@@ -1,12 +1,12 @@
-Rajiko
+Rajiko_MV3
 ====================
 
 Warning:
 --------------------
-This addon does NOt work on Manifest V3 with only declarativeNetRequest API. 
+This addon does NOT work on Manifest V3 with only declarativeNetRequest API. 
 
 I'm trying to fix this for Chrome Extension MV3, and working on it.
-But, I'm wondering if this goes well.
+But, I'd like to know if this goes well.
 
 How to use:
 -------------------
