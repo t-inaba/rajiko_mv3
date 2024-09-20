@@ -3,9 +3,10 @@ Rajiko
 
 Warning:
 --------------------
-This addon will not work on Manifest V3 with only declarativeNetRequest API. 
+This addon does NOt work on Manifest V3 with only declarativeNetRequest API. 
 
-So if Chromium based browsers totally abandon MV2 in the future, I'll stop maintaining for these browsers.
+I'm trying to fix this for Chrome Extension MV3, and working on it.
+But, I'm wondering if this goes well.
 
 How to use:
 -------------------
